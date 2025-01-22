@@ -5,11 +5,14 @@ interface CustomButtonProps {
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
-    label
+    label,
+    className,
+    onClick
 }) => {
     return (
         <div 
-            className={`w-full py-4 bg-locare hover:bg-locare-dark text-white text-center rounded-xl transition cursor-pointer`}
+            onClick={onClick}
+            className={`w-full py-4 bg-locare hover:bg-locare-dark text-white text-center rounded-xl transition cursor-pointer ${className}`}
         >
             {label}
         </div>
